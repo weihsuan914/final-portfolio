@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio —WeiHsuan Lin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- BG Canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Corner Marks -->
+<div class="corner-mark cm-tl"></div>
+<div class="corner-mark cm-tr"></div>
+<div class="corner-mark cm-bl"></div>
+<div class="corner-mark cm-br"></div>
+
+<!-- Page Stamp -->
+<div class="page-stamp" id="page-stamp">SYS/00 — PORTFOLIO</div>
+
+<!-- ──────────────────── NAV ──────────────────── -->
+<nav id="nav" aria-label="Main navigation">
+  <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" role="list">
+    <button class="nav-link active" data-page="about" role="listitem" aria-current="page">
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="8" cy="5" r="2.5"/>
+          <path d="M3 14c0-3 2-5 5-5s5 2 5 5"/>
+        </svg>
+      </span>
+      <span class="nav-label">About</span>
+    </button>
+    <button class="nav-link" data-page="overview" role="listitem">
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="2" y="2" width="5" height="5"/><rect x="9" y="2" width="5" height="5"/>
+          <rect x="2" y="9" width="5" height="5"/><rect x="9" y="9" width="5" height="5"/>
+        </svg>
+      </span>
+      <span class="nav-label">Overview</span>
+    </button>
+    <button class="nav-link" data-page="showcase" role="listitem">
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="1" y="3" width="14" height="10"/><path d="M5 13l2-4 2 2 2-3 2 5"/>
+        </svg>
+      </span>
+      <span class="nav-label">Showcase</span>
+    </button>
+  </div>
+  <div class="nav-sys">
+    <div class="nav-sys-dot"></div>
+    <span class="nav-sys-text">ONLINE · v2.0</span>
+  </div>
+</nav>
+
+<!-- ──────────────────── MAIN ──────────────────── -->
+<main id="main">
+
+  <!-- PAGE 1: ABOUT -->
+  <section id="page-about" class="page active" role="main" aria-label="About">
+    <div class="about-container">
+      <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
+        <img class="avatar-img" src="頭像.png" alt="Avatar">
+      </div>
+
+      <div class="about-identity">
+        <div class="about-name">WeiHsuan Lin</div>
+        <div class="about-role">Artist &nbsp;·&nbsp; Illustrator &nbsp;·&nbsp; 3D Creator</div>
+      </div>
+
+      <div class="h-rule"></div>
+
+      <p class="about-bio">
+        哈囉，我是韋萱，專注於插圖、3D 視覺化與影像創作<br>
+        喜歡使用豐富光影，讓每件作品都帶有奇幻色彩<br>
+        歡迎與我合作或交流任何有趣的創作提案
+      </p>
+
+      <div class="about-links">
+        <a class="about-link" href="#" target="_blank" rel="noopener" aria-label="Behance">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 1.2.866 1.88 2.033 1.88 1.2 0 1.828-.5 2.08-1.22l2.643-.631zM15.971 12h4.148c-.132-1.2-.89-1.82-2.1-1.82-1.201 0-1.896.627-2.048 1.82zM0 5h6.9c1.976 0 3.6 1.098 3.6 2.979 0 1.28-.736 2.163-1.767 2.589C10.02 11.108 11 12.12 11 13.58 11 15.792 9.283 17 6.9 17H0V5zm6.491 5.34c.787 0 1.266-.42 1.266-1.12 0-.68-.479-1.099-1.266-1.099H3v2.22h3.491zM3 14.657h3.576c.883 0 1.438-.5 1.438-1.24 0-.739-.555-1.24-1.438-1.24H3v2.48z"/>
+          </svg>
+          Behance
+        </a>
+        <a class="about-link" href="#" target="_blank" rel="noopener" aria-label="ArtStation">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.164-1.333H9.419L21.598 22.54l1.92-3.325A2.42 2.42 0 0 0 24 17.748zm-11.129-3.462L7.428 4.858l-5.444 9.428h10.887z"/>
+          </svg>
+          ArtStation
+        </a>
+        <a class="about-link" href="mailto:hello@yourname.com" aria-label="Email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="4" width="20" height="16" rx="1"/><path d="M2 4l10 9 10-9"/>
+          </svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE 2: OVERVIEW -->
+  <section id="page-overview" class="page" role="main" aria-label="Work overview">
+    <div class="overview-header">
+      <span class="page-title">Works — Overview</span>
+      <div class="filter-tabs" role="tablist" aria-label="Filter by category">
+        <button class="filter-tab active" data-cat="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-tab" data-cat="illustration" role="tab" aria-selected="false">插圖</button>
+        <button class="filter-tab" data-cat="3d" role="tab" aria-selected="false">3D</button>
+        <button class="filter-tab" data-cat="photo" role="tab" aria-selected="false">影像</button>
+      </div>
+    </div>
+
+    <div class="work-grid" id="work-grid" role="list" aria-label="Work thumbnails">
+      <!-- populated by JS -->
+    </div>
+  </section>
+
+  <!-- PAGE 3: SHOWCASE -->
+  <section id="page-showcase" class="page" role="main" aria-label="Showcase carousel">
+    <div class="showcase-header">
+      <span class="page-title">Showcase — Featured Works</span>
+    </div>
+
+    <div class="carousel-wrap">
+      <div class="carousel-track" id="carousel-track">
+        <!-- slides by JS -->
+      </div>
+      <div class="carousel-progress" id="carousel-progress"></div>
+
+      <button class="carousel-arrow prev" id="car-prev" aria-label="Previous">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M10 3L5 8l5 5"/>
+        </svg>
+      </button>
+      <button class="carousel-arrow next" id="car-next" aria-label="Next">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 3l5 5-5 5"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="carousel-dots" id="carousel-dots"></div>
+
+    <!-- 簡介資訊區塊 -->
+    <div class="showcase-info" id="showcase-info">
+      <div class="si-left">
+        <div class="si-label" id="si-cat">—</div>
+        <div class="si-title" id="si-title">—</div>
+      </div>
+      <div class="si-divider"></div>
+      <div class="si-meta" id="si-meta">
+        <!-- meta-rows injected by JS -->
+      </div>
+      <button class="si-cta" id="si-cta">
+        查看詳細
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2 6h8M6 2l4 4-4 4"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGE 3.5: DETAIL -->
+  <section id="page-detail" class="page" role="main" aria-label="Work detail">
+    <div class="detail-back" id="detail-back" role="button" tabindex="0" aria-label="Go back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M9 2L4 7l5 5"/>
+      </svg>
+      Back
+    </div>
+
+    <div class="detail-body">
+      <div class="detail-media">
+        <div class="detail-slides" id="detail-slides"></div>
+        <button class="detail-arr prev" id="detail-prev" aria-label="Previous image">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 2L4 7l5 5"/>
+          </svg>
+        </button>
+        <button class="detail-arr next" id="detail-next" aria-label="Next image">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 2l5 5-5 5"/>
+          </svg>
+        </button>
+        <div class="detail-counter" id="detail-counter">1 / 1</div>
+        <button class="detail-mute" id="detail-mute" aria-label="Toggle mute" style="display:none">
+          <!-- icon injected by JS -->
+        </button>
+      </div>
+
+      <div class="detail-text">
+        <div class="detail-tabs" id="detail-tabs" role="tablist">
+          <!-- tabs by JS -->
+        </div>
+        <div class="detail-panels" id="detail-panels">
+          <!-- panels by JS -->
+        </div>
+        <div class="detail-panel-nav">
+          <button class="panel-nav-btn" id="panel-prev-btn">← Prev</button>
+          <span class="panel-pos" id="panel-pos">1 / 5</span>
+          <button class="panel-nav-btn" id="panel-next-btn">Next →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ═══════════════════════════════════════════
+   DATA
+═══════════════════════════════════════════ */
+const WORKS = [
+  {
+    id: 1, cat: 'illustration',
+    title: '討伐',
+    images: ['插圖1.png', 'IMG_2502.PNG'],
+    colors: ['#1a1a1a','#2a2a2a','#1f1f1f'],
+    labels: ['插圖 Series 01','插圖 Series 01b'],
+    info: {
+      overview: { title:'簡介 & 花費時間', content:'記征討隊的一次任務<div class="meta-row"><span>工具</span><span>CSP</span></div><div class="meta-row"><span>花費時間</span><span>約6小時</span></div><div class="meta-row"><span>完成日期</span><span>2026.1</span></div>' },
+      concept:  { title:'理念', content:'描繪出隊伍的各成員在戰鬥中配合彼此的情景。' },
+      process:  { title:'創作歷程', content:'在同一畫面中要體現出各角色的技能、定位及武器同時要考慮和諧確實有些難度。' },
+      challenge:{ title:'遭遇困難', content:'不太知道沙場般的戰鬥場景該描寫成什麼樣的才不會搶鋒頭，所以最後變成了速度線般的呈現方式。' },
+      thoughts: { title:'感想', content:'這是一幅畫面格外有魄力的作品，還不賴。' }
+    }
+  },
+  {
+    id: 2, cat: '3d',
+    title: '綠野仙蹤',
+    images: ['綠野仙蹤.jpg', '螢幕擷取畫面 2026-06-30 004857.png', '螢幕擷取畫面 2026-06-30 004944.png','螢幕擷取畫面 2026-06-30 004623.png','螢幕擷取畫面 2026-06-30 004646.png'],
+    colors: ['#111','#1c1c1c','#181818'],
+    labels: ['綠野仙蹤 — Main Render','3D Render B','3D Render C','3D Render D','3D Render E'],
+    info: {
+      overview: { title:'簡介 & 花費時間', content:'以綠野仙蹤為主題的情境作品<div class="meta-row"><span>工具</span><span>Maya、Mixamo、Ps</span></div><div class="meta-row"><span>花費時間</span><span>約22小時</span></div><div class="meta-row"><span>完成日期</span><span>2026.6</span></div>' },
+      concept:  { title:'理念', content:'嘗試還原他們冒險途中的畫面。' },
+      process:  { title:'創作歷程', content:'先在Maya建模後運用Mixamo調整動作，後回到Maya渲染，最後進Ps調整。' },
+      challenge:{ title:'遭遇困難', content:'匯入Mixamo中自動綁定的骨架可能因為模型有所偏差產生拉扯變形。' },
+      thoughts: { title:'感想', content:'我很喜歡慢慢塑形拓撲建模的過程，最後打光渲染等待成果也令人期待。' }
+    }
+  },
+  {
+    id: 3, cat: 'photo',
+    title: '登陸月球',
+    images: ['太空人.mp4'],
+    colors: ['#0f0f0f','#181818'],
+    labels: ['太空人'],
+    info: {
+      overview: { title:'簡介 & 花費時間', content:'簡單的小動畫<div class="meta-row"><span>工具</span><span>Procreate</span></div><div class="meta-row"><span>花費時間</span><span> 2.5 小時 </span></div><div class="meta-row"><span>完成日期</span><span>2025.5</span></div>' },
+      concept:  { title:'理念', content:'一個太空人登上月球的情境。' },
+      process:  { title:'創作歷程', content:'元素簡單所以用帶材質的筆刷增添豐富畫面資訊。' },
+      challenge:{ title:'遭遇困難', content:'對於動作的抓形要精確生動。' },
+      thoughts: { title:'感想', content:'很有效果做起來也簡單的小動畫。' }
+    }
+  },
+  {
+    id: 4, cat: 'illustration',
+    title: '妖塔',
+    images: ['插圖2.png', '插圖2.mp4'],
+    colors: ['#161616','#202020'],
+    labels: ['插圖 Main','插圖 Detail'],
+    info: {
+      overview: { title:'簡介 & 花費時間', content:'以透視為主要素的插圖作品。<div class="meta-row"><span>工具</span><span>Blender、CSP</span></div><div class="meta-row"><span>花費時間</span><span>約 50 小時</span></div><div class="meta-row"><span>完成日期</span><span>2024.12</span></div>' },
+      concept:  { title:'理念', content:'角色正在執行捕妖任務的情境。' },
+      process:  { title:'創作歷程', content:'對於大透視構圖的一次嘗試，將視角置於地面之下產生壓迫感，並因應妖怪要素搭配紅光及綠光營造詭譎氛圍。' },
+      challenge:{ title:'遭遇困難', content:'最初嘗試使用建模來輔助場景呈現，但實際建完拍攝後才驚覺無論怎麼擺攝影機，3D仍舊拍不出我想要的張力感，所以只好手工畫階梯與建築，大概浪費一半的時間在做根本沒用上的建模。' },
+      thoughts: { title:'感想', content:'有場景透視的作品雖然耗時也需要下更多功夫，但完成度直接拉高很多也很有成就感。' }
+    }
+  },
+  {
+    id: 5, cat: '3d',
+    title: 'Texi',
+    images: ['texi.jpg'],
+    colors: ['#131313'],
+    labels: ['Night Taxi — Main Render'],
+    info: {
+      overview: { title:'簡介 & 花費時間', content:'車造型習作<div class="meta-row"><span>工具</span><span>Maya、3Dpanter、Ps</span></div><div class="meta-row"><span>花費時間</span><span>約 7 小時</span></div><div class="meta-row"><span>完成日期</span><span>2026.1</span></div>' },
+      concept:  { title:'理念', content:'建模課的期末作業。' },
+      process:  { title:'創作歷程', content:'Maya建完拆UV後去3Dpanter套質感再回來貼，接著就是渲染後製。' },
+      challenge:{ title:'遭遇困難', content:'還不太熟貼圖，輪胎UV不大會拆。' },
+      thoughts: { title:'感想', content:'感覺貼圖大大加強完成度，特別是法線，地板看著精細不少。' }
+    }
+  },
+  {
+    id: 6, cat: 'photo',
+    title: '莫忘初心',
+    images: ['莫忘初心.mov', '17.jpg', '57.jpg', '60.jpg', '62.jpg', '63.jpg', '64.jpg', '68.jpg', '69.jpg', '85.jpg', '88.jpg', '90.jpg', '93.jpg', '106.jpg', '121.jpg', '132.jpg', '142.jpg', '147.jpg'],
+    colors: ['#0e0e0e','#171717'],
+    labels: ['莫忘初心','Photo B','Photo C','Photo D','Photo E','Photo F','Photo G','Photo H','Photo I','Photo J','Photo K','Photo L','Photo M','Photo N','Photo O','Photo P','Photo Q','Photo R'],
+    info: {
+      overview: { title:'簡介 & 花費時間', content:'分鏡作品:一個關於重拾初心的故事<div class="meta-row"><span>工具</span><span>CSP、Davinci Resolve</span></div><div class="meta-row"><span>花費時間</span><span>繪製週期 1 週</span></div><div class="meta-row"><span>完成日期</span><span>2025.6</span></div>' },
+      concept:  { title:'理念', content:'每個人都有一份屬於自己的初心，只是在漫漫日子中，也許為了生計，也許為情感，早已丟失那份純真，遲遲等到發現的那天，才終於踏上尋回初心的旅途。' },
+      process:  { title:'創作歷程', content:'很早就想好故事內容發展，但在合理化劇情時反而比較困難，雖然是為了省去配音的功夫採選用無台詞的表現形式，不過構思動作來讓角色傳達情感時也很有意思。' },
+      challenge:{ title:'遭遇困難', content:'太晚開始作業導致得刪掉很多片段，剪輯也非常粗糙，時間管理是重要的!' },
+      thoughts: { title:'感想', content:'加入了很多自己想看想畫的元素，儘管擠在1週內畫完很累但創作的過程很開心，希望這個作品能帶給別人一點溫暖。' }
+    }
+  },
+];
+
+const PANEL_ORDER = ['overview','concept','process','challenge','thoughts'];
+
+/* ═══════════════════════════════════════════
+   ANIMATED BACKGROUND GRID
+═══════════════════════════════════════════ */
+(function initGrid() {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, t = 0;
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const gridSize = 44;
+    t += 0.004;
+
+    // ── 1. 3 個獨立光源，各自在格線上緩慢遊走 ──
+    const lights = [
+      { x: (Math.sin(t * 0.31)         * 0.38 + 0.5) * W,
+        y: (Math.cos(t * 0.22)         * 0.38 + 0.5) * H },
+      { x: (Math.sin(t * 0.19 + 2.1)  * 0.38 + 0.5) * W,
+        y: (Math.cos(t * 0.27 + 1.3)  * 0.38 + 0.5) * H },
+      { x: (Math.sin(t * 0.25 + 4.2)  * 0.38 + 0.5) * W,
+        y: (Math.cos(t * 0.17 + 3.7)  * 0.38 + 0.5) * H },
+    ];
+    const RADIUS = Math.max(W, H) * 0.38; // 擴散半徑
+    const PEAK   = 0.13;                  // 最亮點透明度上限（弱化對比）
+
+    // ── 2. 計算每個交叉點亮度（多光源疊加，取最大值） ──
+    const cols = Math.ceil(W / gridSize) + 2;
+    const rows = Math.ceil(H / gridSize) + 2;
+    const bright = [];
+    for (let ci = 0; ci < cols; ci++) {
+      bright[ci] = [];
+      for (let ri = 0; ri < rows; ri++) {
+        const px = ci * gridSize;
+        const py = ri * gridSize;
+        let val = 0;
+        for (const l of lights) {
+          const dist = Math.hypot(px - l.x, py - l.y);
+          const contribution = Math.max(0, 1 - dist / RADIUS);
+          val = Math.max(val, contribution * contribution); // 平方讓邊緣更柔
+        }
+        bright[ci][ri] = val;
+      }
+    }
+
+    // ── 3. 畫線段：用兩端點亮度平均，再平方壓暗低亮區 ──
+    for (let ci = 0; ci < cols; ci++) {
+      for (let ri = 0; ri < rows - 1; ri++) {
+        const avg = (bright[ci][ri] + bright[ci][ri + 1]) * 0.5;
+        const alpha = avg * avg * PEAK;
+        if (alpha < 0.003) continue;
+        ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(ci * gridSize, ri * gridSize);
+        ctx.lineTo(ci * gridSize, (ri + 1) * gridSize);
+        ctx.stroke();
+      }
+    }
+    for (let ri = 0; ri < rows; ri++) {
+      for (let ci = 0; ci < cols - 1; ci++) {
+        const avg = (bright[ci][ri] + bright[ci + 1][ri]) * 0.5;
+        const alpha = avg * avg * PEAK;
+        if (alpha < 0.003) continue;
+        ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(ci * gridSize, ri * gridSize);
+        ctx.lineTo((ci + 1) * gridSize, ri * gridSize);
+        ctx.stroke();
+      }
+    }
+
+    // ── 4. 畫交叉點（比線稍亮） ──
+    for (let ci = 0; ci < cols; ci++) {
+      for (let ri = 0; ri < rows; ri++) {
+        const v = bright[ci][ri];
+        const alpha = v * v * PEAK * 2.2;
+        if (alpha < 0.006) continue;
+        const size = 0.8 + v * 1.4;
+        ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+        ctx.fillRect(ci * gridSize - size / 2, ri * gridSize - size / 2, size, size);
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ═══════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════ */
+const nav        = document.getElementById('nav');
+const navToggle  = document.getElementById('nav-toggle');
+const navLinks   = document.querySelectorAll('.nav-link');
+const pageStamp  = document.getElementById('page-stamp');
+
+let currentPage = 'about';
+let prevPage    = null;
+
+navToggle.addEventListener('click', () => {
+  const exp = nav.classList.toggle('expanded');
+  navToggle.setAttribute('aria-expanded', exp);
+});
+
+// Close nav on outside click (mobile)
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target) && nav.classList.contains('expanded')) {
+    nav.classList.remove('expanded');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
+function goToPage(name) {
+  if (name === currentPage && name !== 'detail') return;
+  prevPage = currentPage;
+  currentPage = name;
+
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  navLinks.forEach(l => {
+    l.classList.remove('active');
+    l.removeAttribute('aria-current');
+  });
+
+  const targetPage = document.getElementById(`page-${name}`);
+  if (targetPage) targetPage.classList.add('active');
+
+  const targetNav = document.querySelector(`.nav-link[data-page="${name}"]`);
+  if (targetNav) {
+    targetNav.classList.add('active');
+    targetNav.setAttribute('aria-current', 'page');
+  }
+
+  const stamps = { about:'SYS/01 — ABOUT', overview:'SYS/02 — OVERVIEW', showcase:'SYS/03 — SHOWCASE', detail:'SYS/03.5 — DETAIL' };
+  pageStamp.textContent = stamps[name] || 'SYS/00 — PORTFOLIO';
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    goToPage(link.dataset.page);
+    if (window.innerWidth < 768) {
+      nav.classList.remove('expanded');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+
+/* ═══════════════════════════════════════════
+   WORK GRID
+═══════════════════════════════════════════ */
+/* ── media helper ── */
+function isVideo(src) { return /\.(mp4|mov|webm|ogg)$/i.test(src); }
+function isYouTube(src) { return /youtube\.com\/embed\//.test(src); }
+
+// forDetail=true → no muted (allow sound); false → muted (thumb/carousel preview)
+function mediaEl(src, alt, extraClass = '', forDetail = false) {
+  if (!src) return '';
+  if (isYouTube(src)) {
+    if (forDetail) {
+      // 詳細頁：完整嵌入，開放聲音與控制列
+      return `<iframe class="yt-embed" src="${src}?autoplay=1&rel=0&modestbranding=1&origin=${encodeURIComponent(location.origin)}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    } else {
+      // 縮圖 / 輪播：顯示 YouTube 靜態預覽圖
+      const videoId = src.split('/embed/')[1].split('?')[0];
+      return `<img class="${extraClass}" src="https://img.youtube.com/vi/${videoId}/mqdefault.jpg" alt="${alt}">`;
+    }
+  }
+  if (isVideo(src)) {
+    const mutedAttr = forDetail ? '' : 'muted';
+    return `<video class="${extraClass}" src="${src}" autoplay ${mutedAttr} loop playsinline preload="metadata"></video>`;
+  }
+  return `<img class="${extraClass}" src="${src}" alt="${alt}">`;
+}
+
+/* mute state (shared across all detail videos) */
+let detailMuted = true; // start muted, user can unmute
+
+const ICON_MUTED = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+  <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+</svg>`;
+const ICON_SOUND = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+  <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+</svg>`;
+
+function updateMuteBtn() {
+  const btn = document.getElementById('detail-mute');
+  if (!btn) return;
+  btn.innerHTML = detailMuted ? ICON_MUTED : ICON_SOUND;
+  btn.setAttribute('aria-label', detailMuted ? '取消靜音' : '靜音');
+  // apply to all videos currently in detail-slides
+  document.querySelectorAll('#detail-slides video').forEach(v => { v.muted = detailMuted; });
+}
+
+document.getElementById('detail-mute').addEventListener('click', () => {
+  detailMuted = !detailMuted;
+  updateMuteBtn();
+});
+
+function buildGrid(cat = 'all') {
+  const grid = document.getElementById('work-grid');
+  grid.innerHTML = '';
+  const filtered = cat === 'all' ? WORKS : WORKS.filter(w => w.cat === cat);
+  filtered.forEach(work => {
+    const item = document.createElement('div');
+    item.className = 'work-thumb';
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('aria-label', work.title);
+    item.tabIndex = 0;
+    const thumbSrc = work.images[0];
+    const thumbMedia = thumbSrc
+      ? mediaEl(thumbSrc, work.title, 'work-thumb-img')
+      : `<div class="img-ph" style="background:${work.colors[0]}"><span>${work.title}</span></div>`;
+    item.innerHTML = `
+      <div class="work-thumb-corner"></div>
+      ${thumbMedia}
+      <div class="work-thumb-overlay">
+        <div class="work-thumb-title">${work.title}</div>
+        <div class="work-thumb-cat">${work.cat === 'illustration' ? '插圖' : work.cat === '3d' ? '3D' : '影像'}</div>
+      </div>
+    `;
+    item.addEventListener('click', () => openDetail(work.id));
+    item.addEventListener('keydown', e => { if (e.key === 'Enter') openDetail(work.id); });
+    grid.appendChild(item);
+  });
+}
+buildGrid();
+
+document.querySelectorAll('.filter-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    buildGrid(tab.dataset.cat);
+  });
+});
+
+/* ═══════════════════════════════════════════
+   CAROUSEL
+═══════════════════════════════════════════ */
+const carTrack   = document.getElementById('carousel-track');
+const carDots    = document.getElementById('carousel-dots');
+const carPrev    = document.getElementById('car-prev');
+const carNext    = document.getElementById('car-next');
+const carProg    = document.getElementById('carousel-progress');
+
+let carIdx       = 0;
+let carTimer     = null;
+let carProgTimer = null;
+const CAR_DELAY  = 4500;
+
+function buildCarousel() {
+  carTrack.innerHTML = '';
+  carDots.innerHTML  = '';
+  WORKS.forEach((work, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide';
+    const slideSrc = work.images[0];
+    const slideMedia = slideSrc
+      ? mediaEl(slideSrc, work.title)
+      : `<div class="img-ph" style="background:${work.colors[0]};height:100%"><span>${work.title}</span></div>`;
+    slide.innerHTML = `
+      ${slideMedia}
+      <div class="carousel-slide-info">
+        <div class="slide-cat">${work.cat === 'illustration' ? '插圖' : work.cat === '3d' ? '3D' : '影像'}</div>
+        <div class="slide-title">${work.title}</div>
+      </div>
+    `;
+    slide.addEventListener('click', () => openDetail(work.id));
+    carTrack.appendChild(slide);
+
+    const dot = document.createElement('div');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => carGoTo(i));
+    carDots.appendChild(dot);
+  });
+}
+
+function carGoTo(idx) {
+  carIdx = (idx + WORKS.length) % WORKS.length;
+  carTrack.style.transform = `translateX(-${carIdx * 100}%)`;
+  document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === carIdx));
+  updateShowcaseInfo(carIdx);
+  resetCarProgress();
+}
+
+function updateShowcaseInfo(idx) {
+  const work = WORKS[idx];
+  if (!work) return;
+
+  document.getElementById('si-cat').textContent =
+    work.cat === 'illustration' ? '插圖' : work.cat === '3d' ? '3D' : '影像';
+  document.getElementById('si-title').textContent = work.title;
+
+  // 從 overview content 擷取 meta-row HTML
+  const raw = work.info.overview.content;
+  const tmp = document.createElement('div');
+  tmp.innerHTML = raw;
+  const rows = tmp.querySelectorAll('.meta-row');
+  const metaEl = document.getElementById('si-meta');
+  metaEl.innerHTML = '';
+  rows.forEach(r => {
+    const clone = r.cloneNode(true);
+    metaEl.appendChild(clone);
+  });
+
+  document.getElementById('si-cta').onclick = () => openDetail(work.id);
+}
+
+function resetCarProgress() {
+  clearTimeout(carTimer);
+  clearTimeout(carProgTimer);
+  carProg.style.transition = 'none';
+  carProg.style.width = '0%';
+  requestAnimationFrame(() => {
+    carProg.style.transition = `width ${CAR_DELAY}ms linear`;
+    carProg.style.width = '100%';
+  });
+  carTimer = setTimeout(() => carGoTo(carIdx + 1), CAR_DELAY);
+}
+
+carPrev.addEventListener('click', () => carGoTo(carIdx - 1));
+carNext.addEventListener('click', () => carGoTo(carIdx + 1));
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { clearTimeout(carTimer); } else { resetCarProgress(); }
+});
+
+buildCarousel();
+updateShowcaseInfo(0);
+resetCarProgress();
+
+/* ═══════════════════════════════════════════
+   DETAIL PAGE
+═══════════════════════════════════════════ */
+let detailWork    = null;
+let detailSlideIdx = 0;
+let panelIdx      = 0;
+
+function openDetail(id) {
+  detailWork = WORKS.find(w => w.id === id);
+  if (!detailWork) return;
+  detailSlideIdx = 0;
+  panelIdx = 0;
+
+  // Build media slides
+  const slidesEl = document.getElementById('detail-slides');
+  slidesEl.innerHTML = '';
+  let hasVideo = false;
+  detailWork.images.forEach((img, i) => {
+    const s = document.createElement('div');
+    s.className = 'detail-slide' + (i === 0 ? ' active' : '');
+    if (img && (isVideo(img) || isYouTube(img))) hasVideo = true;
+    s.innerHTML = img
+      ? mediaEl(img, detailWork.labels[i] || detailWork.title, '', true)
+      : `<div class="img-ph" style="background:${detailWork.colors[i] || detailWork.colors[0]};height:100%"><span>${detailWork.labels[i] || detailWork.title}</span></div>`;
+    slidesEl.appendChild(s);
+  });
+
+  // show mute btn only when work has video; reset to muted each time
+  const muteBtn = document.getElementById('detail-mute');
+  muteBtn.style.display = hasVideo ? 'flex' : 'none';
+  detailMuted = true;
+  updateMuteBtn();
+
+  updateDetailCounter();
+
+  // Build text tabs & panels
+  const tabsEl   = document.getElementById('detail-tabs');
+  const panelsEl = document.getElementById('detail-panels');
+  tabsEl.innerHTML   = '';
+  panelsEl.innerHTML = '';
+
+  PANEL_ORDER.forEach((key, i) => {
+    const info = detailWork.info[key];
+    const tab = document.createElement('button');
+    tab.className = 'detail-tab' + (i === 0 ? ' active' : '');
+    tab.textContent = info.title;
+    tab.setAttribute('role', 'tab');
+    tab.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    tab.addEventListener('click', () => switchPanel(i));
+    tabsEl.appendChild(tab);
+
+    const panel = document.createElement('div');
+    panel.className = 'detail-panel' + (i === 0 ? ' active' : '');
+    panel.setAttribute('role', 'tabpanel');
+    panel.innerHTML = `<h4>${info.title}</h4><p>${info.content}</p>`;
+    panelsEl.appendChild(panel);
+  });
+
+  updatePanelNav();
+  goToPage('detail');
+}
+
+function updateDetailCounter() {
+  const c = document.getElementById('detail-counter');
+  const slides = document.querySelectorAll('#detail-slides .detail-slide');
+  c.textContent = `${detailSlideIdx + 1} / ${slides.length}`;
+}
+
+function switchDetailSlide(dir) {
+  const slides = document.querySelectorAll('#detail-slides .detail-slide');
+  slides[detailSlideIdx].classList.remove('active');
+  detailSlideIdx = (detailSlideIdx + dir + slides.length) % slides.length;
+  slides[detailSlideIdx].classList.add('active');
+  updateDetailCounter();
+}
+
+document.getElementById('detail-prev').addEventListener('click', () => switchDetailSlide(-1));
+document.getElementById('detail-next').addEventListener('click', () => switchDetailSlide(1));
+
+function switchPanel(idx) {
+  panelIdx = idx;
+  document.querySelectorAll('.detail-tab').forEach((t, i) => {
+    t.classList.toggle('active', i === idx);
+    t.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+  });
+  document.querySelectorAll('.detail-panel').forEach((p, i) => p.classList.toggle('active', i === idx));
+  updatePanelNav();
+}
+
+function updatePanelNav() {
+  document.getElementById('panel-prev-btn').disabled = panelIdx === 0;
+  document.getElementById('panel-next-btn').disabled = panelIdx === PANEL_ORDER.length - 1;
+  document.getElementById('panel-pos').textContent = `${panelIdx + 1} / ${PANEL_ORDER.length}`;
+}
+
+document.getElementById('panel-prev-btn').addEventListener('click', () => { if (panelIdx > 0) switchPanel(panelIdx - 1); });
+document.getElementById('panel-next-btn').addEventListener('click', () => { if (panelIdx < PANEL_ORDER.length - 1) switchPanel(panelIdx + 1); });
+
+// Back button
+const detailBack = document.getElementById('detail-back');
+detailBack.addEventListener('click', () => { goToPage(prevPage || 'overview'); });
+detailBack.addEventListener('keydown', e => { if (e.key === 'Enter') goToPage(prevPage || 'overview'); });
+</script>
+</body>
+</html>
